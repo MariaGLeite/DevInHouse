@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  color: #ffffffe6;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: rgb(47, 52, 55);
+  display: flex;
+  height: 100vh;
+
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+#divPrincipal {
+  display: flex;
+  flex-direction: column;
+  
+  margin: 0 auto;
+  max-height: 40vh;
+  overflow: hidden;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+
+  transition: background .1s;
+  background-color: rgb(63, 68, 71);
+  padding: 20px 50px;
+  border-radius: 10px;
+}
+
+#divPrincipal:hover {
+  background-color: rgb(73, 79, 80);
+}
+
+.inputInsert {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.inputInsert input[type="text"] {
+  height: 30px;
+  width: 200px;
+  padding-left: 10px;
+
+  border-radius: 2px;
+
+  outline: none;
+  border: none;
+  background-color: rgb(47, 52, 55);
+}
+
+.inputInsert input[type="button"] {
+  height: 30px;
+  width: 100px;
+  margin-left: 15px;
+  
+  border-radius: 2px;
+  box-sizing: unset;
+  
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+  transition: background .1s;
+  background-color: rgb(47, 52, 55);
+}
+
+.inputInsert input[type="button"]:hover {
+  background-color: rgb(95, 103, 109);
+}
+
+#listaAtividades {
+  padding-left: 5px;
+  width: 100%;
+  list-style-type: none;
+  align-self: flex-start;
+
+  height: 500px;
+  overflow-y: auto;
+}
+
+#listaAtividades li {
+  display: flex;
+  user-select: none;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+#listaAtividades li button {
+  background-color: #2f3437;
+  border: none;
+  justify-self: flex-end;
+
+  height: 15px;
+  width: 15px;
+  margin-right: 20px;
+  padding: 0;
+
+  outline: none;
+  box-sizing: unset;
+  cursor: pointer;
+}
+
+#listaAtividades li span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  max-width: 300px;
+  word-break: break-all;
+}
+
+#listaAtividades li span input {
+  margin-right: 10px;
+}
+
+#listaAtividades li button img {
+  height: 15px;
+  width: 15px;
+  filter: invert(100%);
+}
+
+#listaAtividades #semAtividades {
+  padding-left: 0;
+  width: 100%;
+  font-style: italic;
+  text-align: center;
+  display: block;
+
+  align-self: center;
+}
+
+#warning {
+  display: none;
+}
+
+@media (max-width: 600px) {
+
+  #divPrincipal {
+    width: 100%;
+    max-height: calc(100vh - 50px);
+    height: 100vh;
+    border-radius: 0;
+    transition: none;
+    
+    padding: 25px;
+    align-self: flex-start;
+  }
+
+  #divPrincipal:hover { 
+    background-color: initial;
+  }
+
+  input[type="text"] {
+    background-color: rgb(66, 69, 73) !important;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+}
+
+@media (max-width: 327px) {
+
+  #divPrincipal { 
+    display: none;
+  }
+
+  #warning {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+
+    text-align: center;
+    font-style: italic;
+  }
+
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Tarefas a Fazer</title>
+</head>
+<body onload="carregaAtividadesDoLocalstorage()">
+  <div id="divPrincipal">
+
+    <h1>Atividades Pendentes</h1>
+
+    <div class="inputInsert">
+      <input type="text" autofocus placeholder="Nome da atividade...">
+      <input type="button" value="Adicionar" onclick="criaNovaAtividade(this.parentElement.children[0].value)">
+    </div>
+
+    <ul id="listaAtividades">
+    </ul>
+
+  </div>
+
+  <div id="warning">
+    Aplicativo indisponível nesta resolução.
+  </div>
+</body>
+</html>
